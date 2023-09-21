@@ -1,5 +1,67 @@
-*{
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+html , body{
+
+    font-family:'Fira Sans', sans-serif;
+    background-color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
+}
+
+header{
+    /* background-color: transparent; */
+    background-color: #5f45f1de;
+}
+
+.header-cont{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+
+}
+
+.left-cont , .right-cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.brand{
+    max-width: 100px;
+}
+
+.main-nav{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    /* display: none; */
+}
+
+.container{
+    width: 100%;
+    max-width: 1242px;
+    margin: 0 auto;
+}
+
+.nav-item{
+    color: #e5e5e5;
+    margin-right: 20px;
+}
+
+.nav-item.active{
+    color: white;
+}
+
+.right-cont .svg{
+    color: white;
+}
+
+.right-cont svg , .right-cont img{
+    margin-right: 22px;
+}
+
+.right-cont>img{
+    max-width: 36px;
 }
