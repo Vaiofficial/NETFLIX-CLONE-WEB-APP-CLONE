@@ -10,6 +10,8 @@ html , body{
     
 }
 
+/* START OF NAVBAR CSS */
+
 header{
     /* background-color: transparent; */
     background-color: #5f45f1de;
@@ -30,6 +32,7 @@ header{
 
 .brand{
     max-width: 100px;
+    cursor: pointer;
 }
 
 .main-nav{
@@ -48,6 +51,7 @@ header{
 .nav-item{
     color: #e5e5e5;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .nav-item.active{
@@ -60,8 +64,67 @@ header{
 
 .right-cont svg , .right-cont img{
     margin-right: 22px;
+    cursor: pointer;
 }
 
 .right-cont>img{
     max-width: 36px;
+    cursor: pointer;
+}
+
+/* END OF NAVBAR CSS */
+
+
+/* START OF MOVIES SECTION CSS */
+
+movies-section{
+
+}
+
+.movies-section-heading{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin-bottom: 10px;
+
+}
+
+.explore-nudge{
+    color: rgb(14, 199, 255);
+    font-size: 12px;
+    display: none;
+}
+
+.movies-section-heading:hover .explore-nudge{
+    display: inline-block;
+}
+
+.movies-row{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.movie-item{
+    width: 245px;
+    margin-right: 6px;
+    border-radius: 4px;
+    object-fit: contain;
+    /* height: 250px; */
+}
+
+.movie-item:hover{
+    transform: scale(1.3);
+    transition: transform ease 300ms;
+}
+
+/* RESPONSIVE CSS */
+@media(max-width:767px)
+{
+    .main-nav{
+        display: none;
+    }
 }
