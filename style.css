@@ -10,11 +10,24 @@ html , body{
     
 }
 
+*::-webkit-scrollbar{
+    display: none;
+}
+
 /* START OF NAVBAR CSS */
 
 header{
-    /* background-color: transparent; */
-    background-color: #5f45f1de;
+    background-color: transparent;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: all ease 500ms;
+}
+
+header.black-bg{
+    background-color: rgb(20, 20, 20);
 }
 
 .header-cont{
@@ -44,7 +57,7 @@ header{
 
 .container{
     width: 100%;
-    max-width: 1242px;
+    max-width: 1250px;
     margin: 0 auto;
 }
 
@@ -77,8 +90,9 @@ header{
 
 /* START OF MOVIES SECTION CSS */
 
-movies-section{
+.movies-section{
 
+    margin: 41px 0; 
 }
 
 .movies-section-heading{
@@ -105,6 +119,9 @@ movies-section{
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
     
 }
 
@@ -121,10 +138,92 @@ movies-section{
     transition: transform ease 300ms;
 }
 
+
+/* BANNER SECTION */
+
+.banner-section{
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 98vh;
+    padding-top: 80px;
+    position: relative;
+}
+
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+    
+}
+
+.banner__title{
+    color: white;
+    font-size: 90px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    margin: 0;
+    padding-top: 70px;
+    max-width: 40%;
+}
+
+
+.banner__info{
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.banner__overview{
+    color: white;
+    font-size: 16.4px;
+    line-height: 1.3;
+    max-width: 50%;
+
+}
+
+.banner_fadeBottom{
+    height: 120px;
+    background: linear-gradient(180deg , transparent , rgba(37,37,37,.61) ,#141414);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.action-buttons-cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.action-button{
+    border: none;
+    background-color: white;
+    padding:8px 23px ;
+    margin-right: 11px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.action-button:last-child{
+    background-color: rgb(138, 133, 133);
+    color: white ;
+}
+
+
 /* RESPONSIVE CSS */
 @media(max-width:767px)
 {
     .main-nav{
         display: none;
+    }
+
+    .banner__overview .banner__title{
+        max-width: 100%;
+        
     }
 }
