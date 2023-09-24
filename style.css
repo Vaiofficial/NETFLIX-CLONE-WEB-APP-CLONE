@@ -10,8 +10,18 @@ html , body{
     
 }
 
+.container{
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
 *::-webkit-scrollbar{
     display: none;
+}
+
+*{
+    box-sizing: border-box;
 }
 
 /* START OF NAVBAR CSS */
@@ -45,33 +55,30 @@ header.black-bg{
 
 .brand{
     max-width: 100px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .main-nav{
     list-style: none;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     /* display: none; */
-}
-
-.container{
-    width: 100%;
-    max-width: 1250px;
-    margin: 0 auto;
 }
 
 .nav-item{
     color: #e5e5e5;
     margin-right: 20px;
     cursor: pointer;
+    opacity: .83;
 }
 
 .nav-item.active{
     color: white;
+    opacity: 1;
+    font-weight: 500;
 }
 
-.right-cont .svg{
+.right-cont svg{
     color: white;
 }
 
@@ -80,7 +87,7 @@ header.black-bg{
     cursor: pointer;
 }
 
-.right-cont>img{
+.right-cont img{
     max-width: 36px;
     cursor: pointer;
 }
@@ -98,6 +105,7 @@ header.black-bg{
 .movies-section-heading{
     font-size: 20px;
     font-weight: 700;
+    line-height: 1.2;
     color: rgb(255, 255, 255);
     cursor: pointer;
     margin-bottom: 10px;
@@ -130,12 +138,33 @@ header.black-bg{
     margin-right: 6px;
     border-radius: 4px;
     object-fit: contain;
+    position: relative ;
     /* height: 250px; */
+}
+
+.movie-item-img{
+    width: inherit;
+}
+
+.movie-item .iframe-wrap{
+    position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;  
+     height: 100% ;
+     z-index: 10;
+    display: none;
+    border: none;
+    outline: none;
+}
+
+.movie-item :hover .iframe-wrap{
+    display: block;
 }
 
 .movie-item:hover{
     transform: scale(1.3);
-    transition: transform ease 300ms;
+    transition: transform linear 300ms;
 }
 
 
@@ -162,7 +191,7 @@ header.black-bg{
     line-height: 1.1;
     margin-bottom: 16px;
     margin: 0;
-    padding-top: 70px;
+    /* padding-top: 70px; */
     max-width: 40%;
 }
 
@@ -179,7 +208,7 @@ header.black-bg{
     color: white;
     font-size: 16.4px;
     line-height: 1.3;
-    max-width: 50%;
+    max-width: 40%;
 
 }
 
@@ -207,10 +236,14 @@ header.black-bg{
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
 }
 
 .action-button:last-child{
-    background-color: rgb(138, 133, 133);
+    background-color: rgb(109, 109, 110 , 0.7);
     color: white ;
 }
 
