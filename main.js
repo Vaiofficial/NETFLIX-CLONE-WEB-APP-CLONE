@@ -8,7 +8,7 @@ const apiPaths = {
     fetchAllCategories: `${apiEndpoint}/genre/movie/list?api_key=${apikey}`,
     fetchMoviesList: (id) => `${apiEndpoint}/discover/movie?api_key=${apikey}&with_genres=${id}`,
     fetchTrending: `${apiEndpoint}/trending/all/day?api_key=${apikey}&language=en-US`,
-    searchOnYoutube: (query) => `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=AIzaSyDP4oV_mnGrIgzIa56tVjv4lSY_Lnq2sSs`
+    searchOnYoutube: (query) => `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=AIzaSyAFdHvys-ygiL-hC4oiWCLt0MEu2BepJHI`
 }
 
 // 
@@ -81,7 +81,7 @@ function fetchAndBuildMovieSection(fetchUrl, categoryName) {
             // console.table(res.results);
             const movies = res.results;
             if (Array.isArray(movies) && movies.length) {
-                buildMoviesSection(movies.slice(0, 6), categoryName);
+                buildMoviesSection(movies, categoryName);
             }
             return movies;
         })

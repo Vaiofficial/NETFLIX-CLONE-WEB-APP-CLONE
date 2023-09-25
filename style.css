@@ -4,7 +4,7 @@
 html , body{
 
     font-family:'Fira Sans', sans-serif;
-    /* background-color: rgb(0, 0, 0); */
+    background-color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
     
@@ -257,7 +257,7 @@ body > #profile-body
 }
 
 /* RESPONSIVE CSS */
-@media(max-width:767px)
+@media(max-width:891px)
 {
     .main-nav{
         display: none;
@@ -267,4 +267,39 @@ body > #profile-body
         max-width: 100%;
         
     }
+    
+    .header-cont{
+        padding: 10px 10px;
+    }
+
+    .banner-content{
+        padding: 150px 30px;
+    }
+
+    .movies-section-heading {
+        margin-left: 10px;
+    }
+
+    .banner-section {
+        background-position: center;
+    }
+    
+    .banner__title {
+        font-size: 60px;
+    }
+
+    .banner__info {
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-bottom: 5px;
+        max-width: 40%;
+    }
+
+    .banner__overview {
+        font-size: 14.4px;
+        max-width: 50%;
+    }
+    
 }
