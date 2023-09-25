@@ -4,7 +4,7 @@
 html , body{
 
     font-family:'Fira Sans', sans-serif;
-    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(0, 0, 0); */
     margin: 0;
     padding: 0;
     
@@ -247,6 +247,14 @@ header.black-bg{
     color: white ;
 }
 
+/* PROFILE SECTION CSS */
+
+body > #profile-body
+{
+    width: 700px;
+    height: 600px;
+    background-color: white;
+}
 
 /* RESPONSIVE CSS */
 @media(max-width:767px)
