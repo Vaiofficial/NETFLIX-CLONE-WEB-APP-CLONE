@@ -60,7 +60,7 @@ header.black-bg{
 
 .main-nav{
     list-style: none;
-    display: inline-flex;
+    /* display: inline-flex; */
     flex-direction: row;
     /* display: none; */
 }
@@ -68,6 +68,7 @@ header.black-bg{
 .nav-item{
     color: #e5e5e5;
     margin-right: 20px;
+    display: inline-block;
     cursor: pointer;
     opacity: .83;
 }
@@ -90,6 +91,22 @@ header.black-bg{
 .right-cont img{
     max-width: 36px;
     cursor: pointer;
+}
+
+.hemburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    margin: 5px auto;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    
 }
 
 /* END OF NAVBAR CSS */
@@ -256,9 +273,25 @@ body > #profile-body
     background-color: white;
 }
 
+.hamburger {
+    cursor: pointer;
+    display: none;
+    font-size: 27px;
+    color: white;
+  }
+
 /* RESPONSIVE CSS */
-@media(max-width:891px)
+@media(max-width:902px)
 {
+
+    .hamburger{
+        display: block;
+    }
+
+    .nav-item{
+        display: block;
+    }
+
     .main-nav{
         display: none;
     }
@@ -301,5 +334,7 @@ body > #profile-body
         font-size: 14.4px;
         max-width: 50%;
     }
+
+    
     
 }

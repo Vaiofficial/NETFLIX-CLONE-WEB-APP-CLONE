@@ -150,20 +150,34 @@ function searchMovieTrailer(MovieName, iframeId) {
 const profilePage = document.querySelector('#Profile-Page');
 
 function profileSection() {
-    
-    fetch('profile.html').then(res=>{
-        if(!res.ok){
+
+    fetch('profile.html').then(res => {
+        if (!res.ok) {
             throw new Error("Check Your Network")
         }
         return res.text();
-    }).then(content=>{
+    }).then(content => {
         document.body.innerHTML = content;
-    }).catch(err=>{
-        console.error("Problem with Fetch Operation",err);
+    }).catch(err => {
+        console.error("Problem with Fetch Operation", err);
     });
 }
 
-profilePage.addEventListener("click" , profileSection);
+profilePage.addEventListener("click", profileSection);
+
+
+
+// const navMenu = document.getElementById("menu");
+// function hamburgerClick() {
+
+//     if (navMenu.style.display = "none") 
+//     {
+//         navMenu.style.display = "block";
+//     }
+//     else{
+//         navMenu.style.display = "block";
+//     }
+// }
 
 
 window.addEventListener("load", function () {
